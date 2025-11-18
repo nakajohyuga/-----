@@ -1,3 +1,5 @@
 cv_env/
-.pt/
-.mkv/
+__pycache__/
+*.pyc
+*.mkv
+*.avi

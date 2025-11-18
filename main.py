@@ -3,7 +3,9 @@ from trackers import Tracker
 
 def main():
     # read video
-    video_frames = read_video("input_videos/08fd33.mp4")
+    video_frames = read_video("input_videos/08fd33_4.mp4")
+    
+    print(f"読み込まれたフレーム数: {len(video_frames)}")
     
     #Intialize tracker
     tracker = Tracker("models/best.pt")
