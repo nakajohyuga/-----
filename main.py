@@ -25,6 +25,12 @@ def main():
     else:
         print("トラッキング結果 (players) が空または欠損しています")
     
+    # Interpolate ball positions
+    print("ボール位置の補間を開始します...")
+    tracks['ball'] = tracker.interpolate_ball_positions(tracks['ball'])
+    print("ボール位置の補間が完了しました。")
+    
+    
     # Assign teams
     team_assigner = TeamAssigner()
     team_assigner.assign_team_color(video_frames[0], 
